@@ -36,3 +36,27 @@ The **src/app.js** is the entry point of the application and it can be run as fo
 ```bash
 npm run dev
 ```
+
+## Docker
+
+This project comes with a pre configured **Dockerfile** which has **Nginx**. 
+
+_NOTE:_ You must first build the project to produce the dist/ directory before building the docker image.
+
+```bash
+docker build -t sohailalam2/twizzler-web .
+```
+
+## Screenshots
+
+### Login Page
+
+![homepage screenshot](../docs/homepage.png)
+
+### Tweets Feed
+
+![tweets screenshot](../docs/tweet.png)
+
+### Tweet Reply
+
+![reply screenshot](../docs/reply.png)

@@ -19,3 +19,39 @@ Because of the SSE feature, you can open two or more browser tabs / different br
 - NodeJs v8 or above
 - NPM v5 or above
 
+                    
+## Docker Compose
+
+The application can be run individually as backend and frontend as described in their separate README. However, it can 
+also be run as follows using docker-compose
+
+```bash
+docker-compose up -d
+```
+
+Upon running the application, it can be accessed from the port 8080 of the localhost or local ip.
+
+http://localhost:8080/
+
+
+## Docker Build
+
+The following script can be run to build all docker images and push to the repository 
+
+```bash
+./build-docker.sh
+```
+
+## Screenshots
+
+### Login Page
+
+![homepage screenshot](docs/homepage.png)
+
+### Tweets Feed
+
+![tweets screenshot](docs/tweet.png)
+
+### Tweet Reply
+
+![reply screenshot](docs/reply.png)

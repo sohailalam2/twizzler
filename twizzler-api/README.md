@@ -29,3 +29,13 @@ The **src/app.js** is the entry point of the application and it can be run as fo
 ```bash
 npm run start
 ```
+                                 
+## Docker
+
+This project comes with a pre configured **Dockerfile** which has **NodeJs** and **NPM**. 
+
+_NOTE:_ You must first generate the API docs as explained above before building the docker image.
+
+```bash
+docker build -t sohailalam2/twizzler-api .
+```
