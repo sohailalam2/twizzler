@@ -6,6 +6,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
+const tweets = require('./routes/tweets');
 
 const app = express();
 const { PORT, HOST } = require('./config');
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/tweets', tweets);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
