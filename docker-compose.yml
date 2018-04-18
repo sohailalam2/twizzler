@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  twizzler-api:
+#    build:
+#      context: ./twizzler-api
+    image: sohailalam2/twizzler-api
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ./development.env
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  twizzler-web:
+#    build:
+#      context: ./twizzler-web
+    image: sohailalam2/twizzler-web
+    depends_on:
+      - twizzler-api
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "8080:80"
+    restart: unless-stopped
