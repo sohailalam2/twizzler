@@ -24,15 +24,33 @@
 </template>
 
 <script>
+  import { mapMutations, mapState } from 'vuex';
   import constants from '../constants';
 
   export default {
     name: 'Login',
 
+    async created() {
+      const urlToken = this.$route.query.token;
+
+      if (urlToken) {
+        this.setToken(urlToken);
+        this.$router.push('/tweets');
+      } else if (this.token) {
+        setTimeout(() => this.$router.push('/tweets'), 1000);
+      }
+    },
+
     computed: {
       loginLink() {
         return `${constants.API_URL}/auth/login`;
       },
+
+      ...mapState('Tweets', ['token']),
+    },
+
+    methods: {
+      ...mapMutations('Tweets', ['setToken']),
     },
   };
 </script>
