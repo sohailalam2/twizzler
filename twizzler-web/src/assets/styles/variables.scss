@@ -1,0 +1,20 @@
+/* Bulma Variables Overwrite */
+$radius-small: 0px !default
+$radius: 0px !default
+$radius-large: 0px !default
+
+$brand-primary: #ff5103;
+$brand-secondary: #fff7f5;
+$brand-tertiary: #ede6f9;
+$brand-primary-invert: #fff;
+$brand-tertiary-invert: #000;
+
+$primary: $brand-primary;
+$primary-invert: $brand-primary-invert;
+
+$info: $brand-secondary;
+$info-invert: $brand-tertiary-invert;
+
+$success: $brand-tertiary;
+$success-invert: $brand-tertiary-invert;
+
