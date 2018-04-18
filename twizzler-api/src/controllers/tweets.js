@@ -7,8 +7,9 @@ exports.getAllTweets = async (req, res) => {
 };
 
 exports.postTweet = async (req, res) => {
-  const { comment, userId, name } = req.body;
-  const tweet = await db.tweets.createTweet({ comment, userId, name });
+  const user = req.user;
+  const comment = req.body.comment;
+  const tweet = await db.tweets.createTweet({ comment, userId: user.id, name: user.name });
 
   res.json({ status: 'OK', data: tweet });
 };
@@ -21,9 +22,10 @@ exports.likeTweet = async (req, res) => {
 };
 
 exports.replyTweet = async (req, res) => {
+  const user = req.user;
   const tweetId = req.params.id;
-  const { reply, userId } = req.body;
-  const tweet = await db.tweets.replyToTweet(tweetId, { userId, comment: reply });
+  const { reply } = req.body;
+  const tweet = await db.tweets.replyToTweet(tweetId, { userId: user.id, comment: reply });
 
   res.json({ status: 'OK', data: tweet });
 };

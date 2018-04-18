@@ -4,8 +4,10 @@ const http = require('http');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 
 const index = require('./routes/index');
+const auth = require('./routes/auth');
 const tweets = require('./routes/tweets');
 
 const app = express();
@@ -20,10 +22,12 @@ app.set('view engine', 'pug');
 app.use(logger('combined'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(passport.initialize());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/auth', auth);
 app.use('/tweets', tweets);
 
 // catch 404 and forward to error handler

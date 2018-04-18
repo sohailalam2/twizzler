@@ -1,6 +1,7 @@
 const tweetSchema = require('./schema/tweetSchema');
 
 module.exports = (db) => {
+  const users = db.getCollection('users');
   let tweets = db.getCollection('tweets');
 
   if (tweets === null) {
@@ -37,8 +38,9 @@ module.exports = (db) => {
   const replyToTweet = async (id, reply) => {
     const found = tweets.findOne({ id });
     if (found) {
+      const user = users.findOne({ id: reply.userId });
       if (!found.replies) found.replies = [];
-      found.replies.push({ ...reply, name: 'Reply User' });
+      found.replies.push({ ...reply, name: user.name });
 
       return tweets.update(found);
     }

@@ -1,0 +1,185 @@
+{
+  "filename": "D:\\workspace\\mobilab\\HACKATHON\\twizzler\\twizzler-api\\src\\utils\\db\\data\\db.json",
+  "collections": [
+    {
+      "name": "users",
+      "data": [
+        {
+          "id": "4537238",
+          "name": "Sohail Alam",
+          "avatar": "https://avatars3.githubusercontent.com/u/4537238?v=4",
+          "meta": {
+            "revision": 0,
+            "created": 1524079948907,
+            "version": 0
+          },
+          "$loki": 1
+        }
+      ],
+      "idIndex": [
+        1
+      ],
+      "binaryIndices": {},
+      "constraints": null,
+      "uniqueNames": [],
+      "transforms": {},
+      "objType": "users",
+      "dirty": false,
+      "cachedIndex": null,
+      "cachedBinaryIndex": null,
+      "cachedData": null,
+      "adaptiveBinaryIndices": true,
+      "transactional": false,
+      "cloneObjects": false,
+      "cloneMethod": "parse-stringify",
+      "asyncListeners": false,
+      "disableMeta": false,
+      "disableChangesApi": true,
+      "disableDeltaChangesApi": true,
+      "autoupdate": false,
+      "serializableIndices": true,
+      "ttl": null,
+      "maxId": 1,
+      "DynamicViews": [],
+      "events": {
+        "insert": [
+          null
+        ],
+        "update": [
+          null
+        ],
+        "pre-insert": [],
+        "pre-update": [],
+        "close": [],
+        "flushbuffer": [],
+        "error": [],
+        "delete": [
+          null
+        ],
+        "warning": [
+          null
+        ]
+      },
+      "changes": []
+    },
+    {
+      "name": "tweets",
+      "data": [
+        {
+          "comment": "A person who never made a mistake never tried anything new",
+          "userId": "8733538",
+          "name": "Albert Einstein",
+          "id": "b197db00-433f-11e8-8f1a-9daa8b49037d",
+          "likes": 15,
+          "meta": {
+            "revision": 15,
+            "created": 1524080147633,
+            "version": 0,
+            "updated": 1524081002430
+          },
+          "$loki": 1
+        },
+        {
+          "comment": "No man is rich enough to buy back his past",
+          "userId": "4687209",
+          "name": "Oscar Wilde",
+          "id": "36985140-4340-11e8-8f1a-9daa8b49037d",
+          "likes": 5,
+          "meta": {
+            "revision": 7,
+            "created": 1524080370772,
+            "version": 0,
+            "updated": 1524081367268
+          },
+          "$loki": 2,
+          "replies": [
+            {
+              "userId": "4537238",
+              "comment": "I am Batman! :)",
+              "name": "Sohail Alam"
+            }
+          ]
+        }
+      ],
+      "idIndex": [
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "binaryIndices": {},
+      "constraints": null,
+      "uniqueNames": [],
+      "transforms": {},
+      "objType": "tweets",
+      "dirty": false,
+      "cachedIndex": null,
+      "cachedBinaryIndex": null,
+      "cachedData": null,
+      "adaptiveBinaryIndices": true,
+      "transactional": false,
+      "cloneObjects": false,
+      "cloneMethod": "parse-stringify",
+      "asyncListeners": false,
+      "disableMeta": false,
+      "disableChangesApi": true,
+      "disableDeltaChangesApi": true,
+      "autoupdate": false,
+      "serializableIndices": true,
+      "ttl": null,
+      "maxId": 8,
+      "DynamicViews": [],
+      "events": {
+        "insert": [
+          null
+        ],
+        "update": [
+          null
+        ],
+        "pre-insert": [],
+        "pre-update": [],
+        "close": [],
+        "flushbuffer": [],
+        "error": [],
+        "delete": [
+          null
+        ],
+        "warning": [
+          null
+        ]
+      },
+      "changes": []
+    }
+  ],
+  "databaseVersion": 1.5,
+  "engineVersion": 1.5,
+  "autosave": true,
+  "autosaveInterval": 5000,
+  "autosaveHandle": null,
+  "throttledSaves": true,
+  "options": {
+    "autoload": true,
+    "autosave": true,
+    "serializationMethod": "normal",
+    "destructureDelimiter": "$<\n",
+    "recursiveWait": true,
+    "recursiveWaitLimit": false,
+    "recursiveWaitLimitDuration": 2000,
+    "started": 1524081679286
+  },
+  "persistenceMethod": "fs",
+  "persistenceAdapter": null,
+  "verbose": false,
+  "events": {
+    "init": [
+      null
+    ],
+    "loaded": [],
+    "flushChanges": [],
+    "close": [],
+    "changes": [],
+    "warning": []
+  },
+  "ENV": "NODEJS"
+}
