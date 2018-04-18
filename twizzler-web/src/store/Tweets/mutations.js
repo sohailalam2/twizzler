@@ -20,4 +20,24 @@ export default {
     axios.defaults.headers.common.Authorization = null;
   },
 
+  tweets(state, tweets) {
+    Vue.set(state, 'tweets', tweets);
+  },
+
+  addTweet(state, newTweet) {
+    state.tweets.push(newTweet);
+  },
+
+  likeTweet(state, tweet) {
+    const found = state.tweets.filter(t => t.id === tweet.id)[0];
+
+    Vue.set(found, 'likes', tweet.likes);
+  },
+
+  replyTweet(state, tweet) {
+    const found = state.tweets.filter(t => t.id === tweet.id)[0];
+
+    Vue.set(found, 'replies', tweet.replies);
+  },
+
 };
